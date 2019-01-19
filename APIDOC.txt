@@ -5,14 +5,10 @@
 
 
 接口：
-		restful API格式：通过get/post/put/delete/ 进行数据的增删改
-		
+		restful API格式：通过get/post/put/delete/ 进行数据的查询修改增加删除		
 		session方式：使用JWT 令牌进行客户身份记录
-			JWT格式：Header（头部）Payload（负载）Signature（签名） 
-					(其中Signature 为前两个字符串进行base64加密之后再使用HS256,以及对应的secret进行加密得到的字符串  )
-				Header:{"alg": "HS256","typ": "JWT"}
-				Payload:{"iss ":"Dilili","iat":"14815465461","exp":"14815565461","user_id":"dragon","sub":"log"}
-				
+		cache：使用global内存变量方式进行数据定时更新
+			
 				
 				
 	
@@ -67,7 +63,7 @@
 			1)工作人员的身份验证，如果非法直接拒绝。
 			2)对于合法工作人员身份，则接受所传递的信息，将投票系统置位终止状态不再能开启，并返回提示（关闭投票成功），	
 
-		8、查询投票结果
+		8、查询投票结果（候选人）
 			1)工作人员的身份验证，如果非法直接拒绝。
 			2)对于合法工作人员身份，则接受所传递的信息，并且返回所有候选人名字，以及对应的得票数。
 			
