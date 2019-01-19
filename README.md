@@ -10,10 +10,10 @@ API for voting system
 	
 2、解压出项目包之后进入到项目包目录进行依赖包安装	
 
-npm install
+     npm install
 
 3、打开项目包根目录的config.js文件 进行mongodb的数据库连接配置，端口配置，邮箱配置等等
-
+     工作人员登录预置账号密码为admin ,342806abcd等，都可在配置文件进行修改
 
 4、启动项目
 
